@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.e6c13ad2.css",
-    "main.js": "/static/js/main.60843549.js",
-    "static/js/453.12c1a009.chunk.js": "/static/js/453.12c1a009.chunk.js",
-    "index.html": "/index.html",
-    "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
-    "main.60843549.js.map": "/static/js/main.60843549.js.map",
-    "453.12c1a009.chunk.js.map": "/static/js/453.12c1a009.chunk.js.map"
+    "main.css": "/johnheibelwebsite/static/css/main.e6c13ad2.css",
+    "main.js": "/johnheibelwebsite/static/js/main.356ce4be.js",
+    "static/js/453.12c1a009.chunk.js": "/johnheibelwebsite/static/js/453.12c1a009.chunk.js",
+    "index.html": "/johnheibelwebsite/index.html",
+    "main.e6c13ad2.css.map": "/johnheibelwebsite/static/css/main.e6c13ad2.css.map",
+    "main.356ce4be.js.map": "/johnheibelwebsite/static/js/main.356ce4be.js.map",
+    "453.12c1a009.chunk.js.map": "/johnheibelwebsite/static/js/453.12c1a009.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.60843549.js"
+    "static/js/main.356ce4be.js"
   ]
 }
