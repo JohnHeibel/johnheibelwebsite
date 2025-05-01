@@ -19,78 +19,30 @@ function App() {
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
       <Container>
+        {/* Header */}
         <Box sx={{ textAlign: 'center', my: 4 }}>
           <Typography variant="h2" component="h1">
             John Heibel
           </Typography>
-          <Typography variant="h6">Location: Fremont, California, US</Typography>
+          <Typography variant="h6">Fremont, California, US</Typography>
           <Box>
             <Link href="https://github.com/JohnHeibel" target="_blank" rel="noopener" sx={{ mx: 2 }}>
               GitHub
             </Link>
-            <Link href="https://www.linkedin.com/in/john-heibel-81a005277" target="_blank" rel="noopener" sx={{ mx: 2 }}>
+            <Link href="https://www.linkedin.com/in/john-heibel/" target="_blank" rel="noopener" sx={{ mx: 2 }}>
               LinkedIn
-            </Link>
-            <Link href="https://todo.com" target="_blank" rel="noopener" sx={{ mx: 2 }}>
-              Personal Website
             </Link>
             <Link href="mailto:jheibel@uoregon.edu" sx={{ mx: 2 }}>
               Email
             </Link>
+            <Link href="tel:15104075453" sx={{ mx: 2 }}>
+              Mobile
+            </Link>
           </Box>
         </Box>
         <Divider />
-        <Box sx={{ my: 4 }}>
-          <Typography variant="h4" component="h2" gutterBottom>
-            About Me
-          </Typography>
-          <Typography paragraph>
-            I am a highly skilled software developer proficient in Python and C, with hands-on experience in machine learning libraries such as Huggingface Transformers and Pytorch. Well-versed with development tools including CodeQL, Slurm Workload Manager, and Git/Github. Willing to apply myself to new technologies.
-          </Typography>
-          <Typography paragraph>
-            Bachelor's degree in Computer Science from the University of Oregon, with a cumulative GPA of 4.13.
-          </Typography>
-        </Box>
-        <Divider />
-        <Box sx={{ my: 4 }}>
-          <Typography variant="h4" component="h2" gutterBottom>
-            Projects
-          </Typography>
-          <Paper sx={{ p: 2, mb: 2 }}>
-            <Typography variant="h5" component="h3">
-              <Link href="https://project1.com" target="_blank" rel="noopener">
-                Automatic Multi-Instance GPT
-              </Link>
-            </Typography>
-            <Typography variant="body1" paragraph>
-              <strong>Technologies:</strong> Python, OpenAI API, ChatGPT, Machine Learning
-            </Typography>
-            <Typography paragraph>
-              Utilized the OpenAI API to create a tooling pipeline allowing for a singular instance of GPT-4 to call an arbitrary amount of child ChatGPT instances to improve task accuracy. Child instances are equipped with different tools such as Calculators or Google search through the Google Search API. Implemented multiprocessing and rate-limiting for reliability and speed.
-            </Typography>
-            <Link href="https://github.com/JohnHeibel/Automatic_Multi-instance_GPT-4/" target="_blank" rel="noopener">
-              Source Code
-            </Link>
-          </Paper>
-        </Box>
-        <Divider />
-        <Box sx={{ my: 4 }}>
-          <Typography variant="h4" component="h2" gutterBottom>
-            Skills
-          </Typography>
-          <List>
-            <ListItem>
-              <ListItemText primary="Languages:" secondary="Python, C, C++, Java, Latex" />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="Libraries:" secondary="Huggingface Transformers, OpenAI API, Pytorch, Pandas" />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="Dev Tools:" secondary="CodeQL, Slurm Workload Manager, Git, Github, Jupyter Notebook" />
-            </ListItem>
-          </List>
-        </Box>
-        <Divider />
+
+        {/* Experience */}
         <Box sx={{ my: 4 }}>
           <Typography variant="h4" component="h2" gutterBottom>
             Experience
@@ -100,67 +52,178 @@ function App() {
               Undergraduate Research Assistant
             </Typography>
             <Typography variant="subtitle1">
-              University of Oregon | Eugene, Oregon | June 2023 - Present
+              University of Oregon Machine Learning Lab | Eugene, Oregon | June 2023 - Present
             </Typography>
             <List>
               <ListItem>
-                <ListItemText primary="Created adversarial security testing for Large Language Models such as ChatGPT and LLama." />
+                <ListItemText primary="Led research on adversarial attacks on code generation using language models." />
               </ListItem>
               <ListItem>
-                <ListItemText primary="Systematic testing of malicious code generation using a modified version of the HumanEval evaluation dataset." />
+                <ListItemText primary="Systematic testing of LLMs' ability to generate malicious code using a modified HumanEval and SWE-bench benchmarks." />
               </ListItem>
               <ListItem>
-                <ListItemText primary="Worked with OpenAI API, Huggingface Transformers, and Pytorch to run automated and broad adversarial testing of LLMs to detect malicious code." />
-              </ListItem>
-              <ListItem>
-                <ListItemText primary="Utilized the University High Performance Computing Cluster to efficiently run and finetune open-source models." />
+                <ListItemText primary="Worked with OpenAI API, PyTorch, Docker, and Hugging Face Transformers for automated adversarial testing." />
               </ListItem>
             </List>
           </Paper>
         </Box>
         <Divider />
+
+        {/* Publications */}
+        <Box sx={{ my: 4 }}>
+          <Typography variant="h4" component="h2" gutterBottom>
+            Publications
+          </Typography>
+          <List>
+            <ListItem>
+              <ListItemText
+                primary="MaPPing Your Model: Assessing the Impact of Adversarial Attacks on LLM-based Programming Assistants"
+                secondary={
+                  <>
+                    <Typography component="span" variant="body2">
+                      John Heibel, Daniel Lowd. Proceedings of the ICML 2024 Workshop on Trustworthy Multimodal Foundation Models and AI Agents, July 2024.{' '}
+                      <Link href="https://doi.org/10.48550/arXiv.2407.11072" target="_blank" rel="noopener">
+                        arXiv:2407.11072
+                      </Link>
+                    </Typography>
+                  </>
+                }
+              />
+            </ListItem>
+          </List>
+        </Box>
+        <Divider />
+
+        {/* Education */}
         <Box sx={{ my: 4 }}>
           <Typography variant="h4" component="h2" gutterBottom>
             Education
           </Typography>
           <Typography>
-            <strong>University of Oregon</strong> | Eugene, Oregon, US | Bachelor of Science in Computer Science | Sep 2022 - Present | Cumulative GPA: 4.13
+            <strong>University of Oregon</strong> | Bachelor of Science in Computer Science | Eugene, Oregon | Sep 2022 - Present | GPA: 4.09
           </Typography>
         </Box>
         <Divider />
+
+        {/* Awards */}
+        <Box sx={{ my: 4 }}>
+          <Typography variant="h4" component="h2" gutterBottom>
+            Awards
+          </Typography>
+          <List>
+            <ListItem>
+              <ListItemText
+                primary="Erwin & Gertrude Juilfs Scholarship in Computer and Information Science"
+                secondary="Awarded to two students in 2024 for exceptional GPA and originality of research."
+              />
+            </ListItem>
+          </List>
+        </Box>
+        <Divider />
+
+        {/* Extracurriculars */}
         <Box sx={{ my: 4 }}>
           <Typography variant="h4" component="h2" gutterBottom>
             Extracurriculars
           </Typography>
           <Paper sx={{ p: 2, mb: 2 }}>
             <Typography variant="h5" component="h3">
-              Vice President of the Artificial Intelligence Student Association
+              Cofounder & Vice President, Artificial Intelligence Student Association
             </Typography>
             <Typography variant="subtitle1">University of Oregon</Typography>
             <List>
               <ListItem>
-                <ListItemText primary="Main presenter for technical content and recent news. Proficient at communicating complex topics to both experienced and inexperienced members." />
+                <ListItemText primary="Founded and led the AI Club, managing industry relations and educational initiatives." />
               </ListItem>
               <ListItem>
-                <ListItemText primary="Designed and ran a project teaching club members how to use the OpenAI API and integrate it with existing codebases." />
+                <ListItemText primary="Delivered technical presentations and developed hands-on projects using the OpenAI API." />
               </ListItem>
+            </List>
+          </Paper>
+          <Paper sx={{ p: 2, mb: 2 }}>
+            <Typography variant="h5" component="h3">
+              Founder & Event Coordinator, QuackHacks
+            </Typography>
+            <Typography variant="subtitle1">University of Oregon</Typography>
+            <List>
               <ListItem>
-                <ListItemText primary="Heavily involved with managing the club, maintaining membership, and building industry connections." />
+                <ListItemText primary="Organized a 24-hour hackathon with 100+ attendees and industry mentors." />
               </ListItem>
             </List>
           </Paper>
         </Box>
         <Divider />
+
+        {/* Relevant Courses */}
         <Box sx={{ my: 4 }}>
           <Typography variant="h4" component="h2" gutterBottom>
-            Contact
+            Relevant Courses
           </Typography>
-          <Typography>
-            Email: <Link href="mailto:jheibel@uoregon.edu">jheibel@uoregon.edu</Link>
+          <List>
+            {['CS 415: Operating Systems (A)',
+              'CS 330: C/C++ and Unix (A+)',
+              'CS 471: Intro to Artificial Intelligence (A-)',
+              'CS 313: Intermediate Data Structures (A)',
+              'CS 314: Computer Organization (A)',
+              'CS 315: Intermediate Algorithms (A-)',
+              'CS 453: Data Mining (In Progress)'].map((course) => (
+              <ListItem key={course}>
+                <ListItemText primary={course} />
+              </ListItem>
+            ))}
+          </List>
+        </Box>
+        <Divider />
+
+        {/* Projects */}
+        <Box sx={{ my: 4 }}>
+          <Typography variant="h4" component="h2" gutterBottom>
+            Projects
           </Typography>
-          <Typography>
-            Mobile: <Link href="tel:15104075453">510-407-5453</Link>
+          <Paper sx={{ p: 2, mb: 2 }}>
+            <Typography variant="h5" component="h3">
+              <Link
+                href="https://github.com/JohnHeibel/Automatic_Multi-instance_GPT-4/"
+                target="_blank"
+                rel="noopener"
+              >
+                Automatic Multi-Instance GPT
+              </Link>
+            </Typography>
+            <Typography variant="body1" paragraph>
+              <strong>Technologies:</strong> Python, OpenAI API, ChatGPT, Machine Learning
+            </Typography>
+            <List>
+              <ListItem>
+                <ListItemText primary="Built a pipeline enabling GPT-4 to spawn multiple child GPT-4 instances for task accuracy." />
+              </ListItem>
+              <ListItem>
+                <ListItemText primary="Integrated tools like calculators and Google Search API within child instances." />
+              </ListItem>
+            </List>
+          </Paper>
+        </Box>
+        <Divider />
+
+        {/* Technical Skills */}
+        <Box sx={{ my: 4 }}>
+          <Typography variant="h4" component="h2" gutterBottom>
+            Technical Skills
           </Typography>
+          <List>
+            <ListItem>
+              <ListItemText primary="Languages:" secondary="C, Python, TypeScript, JavaScript, C++, Java, LaTeX" />
+            </ListItem>
+            <ListItem>
+              <ListItemText primary="Libraries:" secondary="OpenAI API, PyTorch, Pandas, NumPy, Matplotlib, React, Hugging Face Transformers" />
+            </ListItem>
+            <ListItem>
+              <ListItemText primary="Dev Tools:" secondary="CodeQL, Slurm, Git, GitHub, Jupyter Notebook" />
+            </ListItem>
+            <ListItem>
+              <ListItemText primary="Databases:" secondary="MySQL, MongoDB" />
+            </ListItem>
+          </List>
         </Box>
       </Container>
     </ThemeProvider>
